@@ -1,0 +1,17 @@
+---
+
+- name: install packages
+  yum : name={{ item }} state=present
+  with_items:
+    - sniproxy
+
+- name: install template
+  template:
+    src=etc_sniproxy.conf.j2
+    dest=/etc/sniproxy.conf
+    owner=root group=root mode=0640
+  notify:
+    - reload sniproxy
+
+- name: start and enable service
+  service: name=sniproxy state=started enabled=yes
