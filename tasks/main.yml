@@ -11,7 +11,7 @@
     dest=/etc/sniproxy.conf
     owner=root group=root mode=0640
   notify:
-    - reload sniproxy
+    - restart sniproxy
 
 - name: start and enable service
   service: name=sniproxy state=started enabled=yes
