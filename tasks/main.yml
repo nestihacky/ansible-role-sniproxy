@@ -1,7 +1,12 @@
 ---
+- name: install rmarko-sniproxy COPR repo file
+  copy:
+    src=rmarko-sniproxy.repo
+    dest=/etc/yum.repos.d/rmarko-sniproxy-epel-7.repo
+  when: ansible_os_family == 'RedHat' and ansible_distribution != 'Fedora'
 
 - name: install packages
-  yum : name={{ item }} state=present
+  yum: name={{ item }} state=present
   with_items:
     - sniproxy
 
