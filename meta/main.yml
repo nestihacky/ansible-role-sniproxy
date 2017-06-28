@@ -16,6 +16,5 @@ galaxy_info:
   categories:
    - system
 
-# FIXME: epel
 #dependencies:
 #  - { role: nestihacky.systemd }

@@ -8,11 +8,6 @@ Role Variables
 
 See also `defaults/main.yml`.
 
-Dependencies
-------------
-
-EPEL
-
 Example Playbook
 ----------------
 
@@ -27,4 +22,4 @@ Author Information
 ------------------
 
 * http://base48.cz
-* https://github.com/nestihacky/ansible-role-apache
+* https://github.com/nestihacky/ansible-role-sniproxy
